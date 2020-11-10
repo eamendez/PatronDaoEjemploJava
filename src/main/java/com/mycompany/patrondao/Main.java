@@ -15,8 +15,8 @@ public class Main {
     private UsuarioImplemDao usuarioImplementacion;
     private conexionBDD conBDD;
     private Statement sentenciaSQL;
-    private String name = "camilo Loco";
-    private String correo = "camilo@yahoo.com";
+    private String name = "Pepito Perez";
+    private String correo = "pepitoperez@gmail.com";
     
     
 
@@ -28,7 +28,7 @@ public class Main {
 
         sentenciaSQL = conBDD.establecerConexionBDD(JDBC_DRIVER, DATABASE_URL);
         // Se consulta la base de datos
-        ResultSet resultConsulta = usuarioImplementacion.consultarBaseDatos(sentenciaSQL, "select * from usuario");
+        ResultSet resultConsulta = usuarioImplementacion.consultarBaseDatos(sentenciaSQL, "SELECT * FROM usuario");
         //lista usuarios consultados
         usuarioImplementacion.listarUsuario(resultConsulta);
 
